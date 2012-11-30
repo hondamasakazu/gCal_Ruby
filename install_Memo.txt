@@ -1,0 +1,21 @@
+ruby dk.rb init
+ruby dk.rb install
+gem install rubygems-update
+update_rubygems
+gem update
+gem install rspec
+gem install rspec-rails
+gem install git
+gem update
+gem install pkg-config
+gem install rails
+
+#グーグルカレンダー
+gem install gcalapi
+#Excel操作
+gem install spreadsheet
+#rails
+gem install rails -y -v 3.0.5
+
+#Ruby バージョン
+ruby -v 1.8.7
