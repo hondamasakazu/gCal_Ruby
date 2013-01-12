@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 require "kconv";
 require "gcalapi";
+require './model/ScheduleModel.rb'
 require './model/SerchCondtionModel.rb'
 require './model/SerchOutputModel.rb'
 require './logic/SerchGoogleCalender.rb'
@@ -33,15 +34,23 @@ Googleカレンダー情報取得実行
           puts serchOutputModel.name
           puts serchOutputModel.acount
           #タイトル
-          puts event.title
+          #puts event.title
           #詳細
-          puts event.desc
+          #puts event.desc
           #場所
           #puts event.where
           #開始日時
-          puts event.st
+          #puts event.st
           #終了日時
-          puts event.en
+          #puts event.en
+          
+          schejule = ScheduleModel.new(event);
+          puts schejule.getTitle()
+          puts schejule.getDesc()
+          puts schejule.getWhere()
+          puts schejule.getStartDate()
+          puts schejule.getEndDate()
+          
           print(cnt , "件目")
           cnt = cnt + 1
         end
